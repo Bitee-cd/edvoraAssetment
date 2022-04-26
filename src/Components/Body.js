@@ -19,7 +19,7 @@ function Body(props) {
             setError(error);
           });
        
-      }, []);
+      }, [urlData]);
     
       if (error) return `Error: ${error.message}`;
     
@@ -34,7 +34,7 @@ function Body(props) {
             <NavLink to="pastRides"  className={({ isActive }) => (isActive ? "link-active" : "link")}>Past Rides</NavLink>
         </div>
         <div className="text-white mt-5">
-        <Outlet context={[rides,setRides]}/>
+        <Outlet context={rides}/>
         </div>
      
     </div>

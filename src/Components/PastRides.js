@@ -1,8 +1,8 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom'
 
-function PastRides({results}) {
-    const [rides,setRides] = useOutletContext()
+function PastRides() {
+    const rides = useOutletContext()
 
   return (
     <div>

@@ -4,7 +4,7 @@ import { useOutletContext } from 'react-router-dom'
 
 
 function NearestRides() {
-    const [rides,setRides] = useOutletContext()
+    const rides = useOutletContext()
   return (
     <div>
   {rides && <div>{rides.map((ride,id)=>

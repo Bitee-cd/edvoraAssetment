@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router-dom";
 
 function UpcomingRides() {
 
- const [rides,setRides] = useOutletContext()
+ const rides = useOutletContext()
   
 return (
   <div>

@@ -23,7 +23,7 @@ function App() {
       }).catch(error => {
           setError(error);
         });
-    }, []);
+    }, [urlData]);
 console.log(user)
     
   
