@@ -1,0 +1,10 @@
+/* Specific styles for non-active links */
+.link {
+    color:#D0CBCB
+  }
+  
+  /* Specific styles for active links */
+  .link-active {
+    color: white;
+   text-decoration: underline;
+  }
