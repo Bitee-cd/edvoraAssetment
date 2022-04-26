@@ -23,7 +23,8 @@ function App() {
       }).catch(error => {
           setError(error);
         });
-    }, [urlData]);
+        // eslint-disable-next-line
+    }, []);
 console.log(user)
     
   

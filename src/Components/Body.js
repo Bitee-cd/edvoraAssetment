@@ -4,7 +4,7 @@ import { Outlet, NavLink} from 'react-router-dom'
 import './Body.css'
 
 
-function Body(props) {
+function Body() {
     const urlData ="https://assessment.api.vweb.app/rides"   
     let [rides,setRides]= useState(null)
     
@@ -18,8 +18,8 @@ function Body(props) {
         }).catch(error => {
             setError(error);
           });
-       
-      }, [urlData]);
+       // eslint-disable-next-line
+      }, []);
     
       if (error) return `Error: ${error.message}`;
     
