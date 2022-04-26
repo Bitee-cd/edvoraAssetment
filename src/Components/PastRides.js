@@ -4,9 +4,13 @@ import { useOutletContext } from 'react-router-dom'
 function PastRides() {
     const rides = useOutletContext()
 
+    const today = new Date()
+
+
   return (
     <div>
-  {rides && <div>{rides.map((ride,id)=>
+  {rides && <div>{rides.filter(ride=>today>new Date(ride.date))
+  .map((ride,id)=>
   
   (<div >
       <div className="flex bg-[#111] text-white my-3"key={ride.id} >

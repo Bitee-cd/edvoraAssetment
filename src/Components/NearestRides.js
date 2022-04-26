@@ -19,7 +19,7 @@ function NearestRides() {
                 <div className="contentBox mx-3">
                     <p className="my-2">Ride id: {ride.id}</p>
                     <p className="my-2">Origin Station: {ride.origin_station_code}</p>
-                    <p className="my-2">Origin Path: {ride.station_path}</p>
+                    <p className="my-2">Origin Path: {ride.station_path.map((item,index) => item[index])}</p>
                     <p className="my-2">Date: {ride.date}</p>
                     <p className="my-2">Distance</p>
                     

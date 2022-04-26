@@ -4,11 +4,12 @@ import { useOutletContext } from "react-router-dom";
 function UpcomingRides() {
 
  const rides = useOutletContext()
-  
+const today = new Date()
 return (
   <div>
-{rides && <div>{rides.map((ride,id)=>
-
+{rides && <div>
+{rides.filter(ride=>today<new Date(ride.date))
+.map((ride,id)=>
 (<div >
     <div className="flex bg-[#111] text-white my-3"key={ride.id} >
     <div className="card bg-[#111] m-4 rounded-xl">
@@ -19,7 +20,7 @@ return (
               <div className="contentBox mx-3">
                   <p className="my-2">Ride id: {ride.id}</p>
                   <p className="my-2">Origin Station: {ride.origin_station_code}</p>
-                  <p className="my-2">Origin Path: {ride.station_path}</p>
+                  <p className="my-2">{ride.station_path.map(item => item)}</p>
                   <p className="my-2">Date: {ride.date}</p>
                   <p className="my-2">Distance</p>
                   
