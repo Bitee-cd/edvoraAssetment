@@ -20,7 +20,6 @@ function Header({user}) {
             </div>
                 </>
             }
-               
         </div>
     )
 }

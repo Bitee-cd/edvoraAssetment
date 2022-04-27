@@ -37,7 +37,7 @@ console.log(user)
       <Header user={user} />
     <Routes>
       <Route path="/" element={<Body/>}>
-        <Route path="nearestRides" element={<NearestRides />} />
+        <Route path="nearestRides" element={<NearestRides user={user}/>} />
         <Route path="pastRides" element={<PastRides />} />
         <Route path="upcomingRides" element={<UpcomingRides />} />
       </Route>
