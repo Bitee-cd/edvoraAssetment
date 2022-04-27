@@ -34,7 +34,7 @@ user && console.log(user)
    
   return (
     <div>
-      {rides && 
+      {(rides && user) && 
         <div>{rides.map((ride,id)=>
   (
       <div className="flex bg-[#111] text-white my-3"key={ride.id} >
@@ -49,7 +49,7 @@ user && console.log(user)
                         <p className="my-2">Origin Station: {ride.origin_station_code}</p>
                         <p className="my-2">Origin Path: {JSON.stringify(ride.station_path)}</p>
                         <p className="my-2">Date: {ride.date}</p>
-                        <p className="my-2">Distance: {(ride.staion_path)}</p>
+                        <p className="my-2">Distance: {Math.min(...ride.station_path.map(a => Math.abs(a-user.station_code)))}</p>
                         
                     </div>
                 </div>
