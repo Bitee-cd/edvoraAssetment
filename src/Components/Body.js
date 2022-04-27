@@ -28,11 +28,17 @@ function Body() {
 
   return (
     <div className="body p-6">
-         <div className="title  grid place-content start grid-cols-9 gap-4 ">
-            <NavLink to="/nearestRides"  className={({ isActive }) => (isActive ? "link-active" : "link")}>Nearest Rides</NavLink>
-            <NavLink to="upcomingRides"  className={({ isActive }) => (isActive ? "link-active" : "link")}>Upcoming Rides</NavLink>
-            <NavLink to="pastRides"  className={({ isActive }) => (isActive ? "link-active" : "link")}>Past Rides</NavLink>
+      <div className="px-6 flex justify-between">
+        <div className="title  grid place-content start grid-cols-3 gap-4 ">
+              <NavLink to="/nearestRides"  className={({ isActive }) => (isActive ? "link-active" : "link")}>Nearest Rides</NavLink>
+              <NavLink to="upcomingRides"  className={({ isActive }) => (isActive ? "link-active" : "link")}>Upcoming Rides</NavLink>
+              <NavLink to="pastRides"  className={({ isActive }) => (isActive ? "link-active" : "link")}>Past Rides</NavLink>
+          </div>
+          <div>
+          filters
         </div>
+      </div>
+        
         <div className="text-white mt-5">
         <Outlet context={rides}/>
         </div>
