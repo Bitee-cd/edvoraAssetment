@@ -1,0 +1,5 @@
+export const actionTypes={
+    SET_RIDES:"SET_RIDES",
+    SELECT_RIDE_STATE:"SELECT_RIDE_STATE",
+    SELECT_RIDE_CITY:"SELECT_RIDE_STATE"
+}

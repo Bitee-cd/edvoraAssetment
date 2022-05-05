@@ -10,8 +10,10 @@ import UpcomingRides from './Components/UpcomingRides';
 
 
 
-function App() {
 
+function App() {
+    
+  
   const urlData ="https://assessment.api.vweb.app/user"   
   let [user,setUser]= useState(null)
   const [error, setError] = useState(null);
@@ -25,21 +27,20 @@ function App() {
         });
         // eslint-disable-next-line
     }, []);
-console.log(user)
+user&&console.log(user)
     
   
     if (error) return `Error: ${error.message}`;
   
-  
-  
+
     return (
     <div className="App bg-[#6a6c6d] min-h-screen">
       <Header user={user} />
     <Routes>
       <Route path="/" element={<Body/>}>
         <Route path="nearestRides" element={<NearestRides user={user}/>} />
-        <Route path="pastRides" element={<PastRides />} />
-        <Route path="upcomingRides" element={<UpcomingRides />} />
+        <Route path="pastRides" element={<PastRides  user={user}/>} />
+        <Route path="upcomingRides" element={<UpcomingRides user={user}/>} />
       </Route>
     </Routes>
     </div>
